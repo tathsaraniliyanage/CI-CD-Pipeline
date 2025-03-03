@@ -83,4 +83,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: prabodha1234/your-html-frontend:latest
+          tags: prabodha1234/card frontend:latest
