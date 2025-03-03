@@ -47,7 +47,8 @@
 
 
 
-name: CI/CD Pipeline with Docker
+# name: CI/CD Pipeline with Docker
+name: card-frontend
 
 on:
   push:
@@ -79,6 +80,12 @@ jobs:
 
       # Step 4: Build and push Docker image
       - name: Build and push Docker image
+        run: |
+         docker build -t prabodha1234/card-frontend:latest .
+          echo "Docker image built successfully."
+           docker push prabodha1234/card-frontend:latest
+            echo "Docker image pushed successfully."
+
         uses: docker/build-push-action@v4
         with:
           context: .
