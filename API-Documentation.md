@@ -115,3 +115,75 @@ docker run -p 8080:80 card-frontend
 ##  3. CI/CD Pipeline with Docker
 
 update CI/CD pipeline to build and push the Docker image to a container registry (e.g., Docker Hub).
+
+
+```
+name: CI/CD Pipeline with Docker
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          tags: your-dockerhub-username/your-html-frontend:latest
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-and-test
+
+    steps:
+      - name: Deploy to server
+        run: |
+          ssh user@your-server-ip 'docker pull your-dockerhub-username/your-html-frontend:latest && docker run -d -p 80:80 your-dockerhub-username/your-html-frontend:latest'
+```
+
+
+
+## 4. Steps to Use This Workflow
+
+   - Add Secrets to GitHub
+
+   Go to your GitHub repository > Settings > Secrets and 
+   variables > Actions.
+   
+   Add the following secrets:
+
+   ```
+   DOCKER_HUB_USERNAME: Your Docker Hub username.
+
+   DOCKER_HUB_TOKEN: Your Docker Hub access token.
+   ```
+
+
+   - Push the Workflow File
+
+   ```
+   git add .github/workflows/ci-cd-pipeline.yml
+   git commit -m "Add CI/CD pipeline with Docker"
+   git push origin main
+   ```
