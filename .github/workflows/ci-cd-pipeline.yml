@@ -1,0 +1,49 @@
+name: CI/CD Pipeline for HTML Frontend
+
+# Trigger the workflow on push or pull request to the main branch
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+# Jobs to run
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest  # Use a GitHub-hosted runner
+
+    steps:
+      # Step 1: Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Install dependencies (if any, e.g., npm packages)
+      - name: Install dependencies
+        run: |
+          npm install  # Only if you have a package.json file
+
+      # Step 3: Run tests (if any, e.g., linting or unit tests)
+      - name: Run tests
+        run: |
+          npm test  # Only if you have tests
+
+      # Step 4: Deploy to a server (e.g., GitHub Pages)
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./src  # The folder containing your HTML files
+
+
+
+
+
+
+
+
+
+
+
+
