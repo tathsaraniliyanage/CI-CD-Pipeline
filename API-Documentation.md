@@ -157,7 +157,7 @@ jobs:
     steps:
       - name: Deploy to server
         run: |
-          ssh user@your-server-ip 'docker pull your-dockerhub-username/your-html-frontend:latest && docker run -d -p 80:80 prabodha1234/card-frontend:latest'
+          ssh user@your-server-ip 'docker pull prabodha1234/card-frontend && docker run -d -p 80:80 prabodha1234/card-frontend:latest'
 ```
 
 
