@@ -34,8 +34,7 @@ Workflow files are written in YAML format (e.g., ci-cd-pipeline.yml) and define 
    - Add source code to yml file
       
      ```
-     name: CI/CD Pipeline for HTML Frontend
-
+    name: CI/CD Pipeline for HTML Frontend
 
     branch
       on:
