@@ -36,7 +36,7 @@ Workflow files are written in YAML format (e.g., ci-cd-pipeline.yml) and define 
      ```
      name: CI/CD Pipeline for HTML Frontend
 
-# Trigger the workflow on push or pull request to the main 
+
        branch
          on:
           push:
@@ -46,7 +46,7 @@ Workflow files are written in YAML format (e.g., ci-cd-pipeline.yml) and define 
             branches:
             - main
 
-# Jobs to run
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest  # Use a GitHub-hosted runner
@@ -179,6 +179,8 @@ jobs:
    DOCKER_HUB_TOKEN: Your Docker Hub access token.
    ```
 
+
+   - How to generate a docker
 
    - Push the Workflow File
 
