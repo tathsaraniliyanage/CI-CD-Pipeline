@@ -148,7 +148,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: your-dockerhub-username/card-frontend:latest
+          tags: prabodha1234/card-frontend:latest
 
   deploy:
     runs-on: ubuntu-latest
@@ -157,7 +157,7 @@ jobs:
     steps:
       - name: Deploy to server
         run: |
-          ssh user@your-server-ip 'docker pull your-dockerhub-username/your-html-frontend:latest && docker run -d -p 80:80 your-dockerhub-username/card-frontend:latest'
+          ssh user@your-server-ip 'docker pull your-dockerhub-username/your-html-frontend:latest && docker run -d -p 80:80 prabodha1234/card-frontend:latest'
 ```
 
 
