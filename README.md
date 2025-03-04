@@ -18,5 +18,27 @@ ci-cd-pipeline/
 └── API-Documentation.md  
 ```
 
+
+---
+
+## 🌟 Technologies Used
+
+- **Docker** - create consistent, isolated, and portable environments for developing, testing, and deploying applications, ensuring they run the same way everywhere.
+- **CI/CD Pipeline** - To automate the building, testing, and deployment of applications
+- **HTML** - create frontend application
+- **Tailwindcss** - Add styles to frontend application
+- **yaml files (.yml)** - to define workflows and configurations  for CI/CD pipelines in GitHub Actions
+
+---
+
+
 Further details for refer to API Documentation.
 
+
+## 📚 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Happy Coding! ✨
