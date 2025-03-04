@@ -166,9 +166,10 @@ jobs:
    
    - Generate Secrets in DockerHub
 
-    Docker Hub uses access tokens instead of passwords for secure 
-    authentication in CI/CD pipelines and other automated 
-    workflows.
+
+  Docker Hub uses access tokens instead of passwords for secure 
+  authentication in CI/CD pipelines and other automated 
+  workflows.
 
     1. Create a Docker Hub Account
 
@@ -191,7 +192,7 @@ jobs:
    variables > Actions.
    ```
    
-     Add the following secrets:
+    - Add the following secrets:
 
    ```
    DOCKER_HUB_USERNAME: Your Docker Hub username.
