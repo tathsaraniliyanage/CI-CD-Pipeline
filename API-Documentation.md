@@ -171,14 +171,14 @@ jobs:
   authentication in CI/CD pipelines and other automated 
   workflows.
 
-    1. Create a Docker Hub Account
+  1. Create a Docker Hub Account
 
-    2. Navigate to Account settings in top-right corner of the 
+  2. Navigate to Account settings in top-right corner of the 
        profile icon..
 
-    3. In the left-hand menu, click on Security
+  3. In the left-hand menu, click on Security
 
-    4. Create a New Access Token
+  4. Create a New Access Token
 
       - add description
       - Set the Permissions to Read & Write
@@ -192,7 +192,7 @@ jobs:
    variables > Actions.
    ```
    
-    - Add the following secrets:
+  Add the following secrets:
 
    ```
    DOCKER_HUB_USERNAME: Your Docker Hub username.
