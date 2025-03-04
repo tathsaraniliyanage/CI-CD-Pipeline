@@ -2,6 +2,9 @@
 
 Working with a CI/CD pipeline in a GitHub project involves using GitHub Actions, which is GitHub's built-in automation tool. GitHub Actions allows you to create workflows to automate tasks like building, testing, and deploying your code. 
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="/src/assets/preview.png" alt="Image 2">
+</div>
 
 ## folder structure
 
