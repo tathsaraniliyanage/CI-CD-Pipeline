@@ -79,7 +79,7 @@ Workflow files are written in YAML format (e.g., ci-cd-pipeline.yml) and define 
 
    - In the root of your project, create a file named Dockerfile
 
-   - Add the following content to the Dockerfile
+   - Add the relavant content to the Dockerfile
 
 
 ```
@@ -163,13 +163,35 @@ jobs:
 
 
 ## 4. Steps to Use This Workflow
+   
+   - Generate Secrets in DockerHub
 
-   - Add Secrets to GitHub
+    Docker Hub uses access tokens instead of passwords for secure 
+    authentication in CI/CD pipelines and other automated 
+    workflows.
 
+    1. Create a Docker Hub Account
+
+    2. Navigate to Account settings in top-right corner of the 
+       profile icon..
+
+    3. In the left-hand menu, click on Security
+
+    4. Create a New Access Token
+
+      - add description
+      - Set the Permissions to Read & Write
+      - click generate button
+
+
+   - Add DockerHub Secrets to GitHub
+
+   ```
    Go to your GitHub repository > Settings > Secrets and 
    variables > Actions.
+   ```
    
-   Add the following secrets:
+     Add the following secrets:
 
    ```
    DOCKER_HUB_USERNAME: Your Docker Hub username.
@@ -177,8 +199,6 @@ jobs:
    DOCKER_HUB_TOKEN: Your Docker Hub access token.
    ```
 
-
-   - How to generate a docker
 
    - Push the Workflow File
 
