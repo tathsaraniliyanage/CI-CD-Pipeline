@@ -1,4 +1,4 @@
-# CI/CD Pipeline with Docker
+#  🚀 CI/CD Pipeline with Docker
 
 Working with a CI/CD pipeline in a GitHub project involves using GitHub Actions, which is GitHub's built-in automation tool. GitHub Actions allows you to create workflows to automate tasks like building, testing, and deploying your code. 
 
@@ -32,7 +32,7 @@ ci-cd-pipeline/
 ---
 
 
-Further details for refer to API Documentation.
+Further details for refer the API Documentation.
 
 
 ## 📚 License
