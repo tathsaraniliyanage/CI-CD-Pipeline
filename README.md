@@ -5,6 +5,7 @@ Working with a CI/CD pipeline in a GitHub project involves using GitHub Actions,
 
 ## folder structure
 
+```
 ci-cd-pipeline/
 ├── .github/
 │   └── workflows/
@@ -15,6 +16,7 @@ ci-cd-pipeline/
 │   └── (my test code)
 └── README.md
 └── API-Documentation.md  
+```
 
-
+Further details for refer to API Documentation.
 
