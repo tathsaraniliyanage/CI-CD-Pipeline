@@ -47,9 +47,9 @@ Workflow files are written in YAML format (e.g., ci-cd-pipeline.yml) and define 
             - main
 
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest  # Use a GitHub-hosted runner
+    jobs:
+       build-and-deploy:
+          runs-on: ubuntu-latest 
 
     steps:
       # Step 1: Checkout the code
