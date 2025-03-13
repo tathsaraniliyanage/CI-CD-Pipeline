@@ -2,11 +2,8 @@
 
 Working with a CI/CD pipeline in a GitHub project involves using GitHub Actions, which is GitHub's built-in automation tool. GitHub Actions allows you to create workflows to automate tasks like building, testing, and deploying your code. 
 
-<div style="display: flex; justify-content: center; align-items: center;">
-  <img src="/src/assets/preview.png" alt="Image 2">
-</div>
 
-## folder structure
+## folder structure  📚 
 
 ```
 ci-cd-pipeline/
@@ -22,18 +19,51 @@ ci-cd-pipeline/
 ```
 
 
+## Workflow 🚀
+
+1. Development:
+
+  - Write code using HTML, CSS, and JavaScript.
+  - Use Docker to create a consistent development environment.
+
+2. CI Pipeline:
+
+  - Push code to a Git repository (e.g., GitHub, GitLab).
+  - The CI pipeline automatically:
+     - Lints your code.
+     - Runs tests (if any).
+     - Builds a Docker image.
+
+3. CD Pipeline:
+
+  - The CD pipeline automatically deploys the Docker image to nginx web server.
+
+4. Production:
+
+  - Frontend is live and accessible to users.
+
+
 ---
 
 ## 🌟 Technologies Used
 
-- **Docker** - create consistent, isolated, and portable environments for developing, testing, and deploying applications, ensuring they run the same way everywhere.
+- **Docker** - (to create a consistent development environment) create consistent, isolated, and portable environments for developing, testing, and deploying applications, ensuring they run the same way everywhere.
 - **CI/CD Pipeline** - To automate the building, testing, and deployment of applications
+- **Nginx server** - The CD pipeline automatically deploys the Docker image to nginx server
 - **HTML** - create frontend application
 - **Tailwindcss** - Add styles to frontend application
 - **yaml files (.yml)** - to define workflows and configurations  for CI/CD pipelines in GitHub Actions
 
 ---
 
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="/src/assets/preview.png" alt="Image 2">
+</div>
+
+
+
+---
 
 Further details for refer the API Documentation.
 
