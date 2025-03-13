@@ -97,6 +97,12 @@ CMD ["nginx", "-g", "daemon off;"]
 ```
 
 
+## Docker login
+
+```
+docker login -u prabodha1234
+```
+
 ## Build the Docker Image
 
 ```
