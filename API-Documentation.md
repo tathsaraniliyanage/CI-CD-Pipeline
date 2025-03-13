@@ -7,80 +7,82 @@ A CI/CD (Continuous Integration/Continuous Deployment) pipeline is a series of a
 
 1. Development:
 
-  - Write code using HTML, CSS, and JavaScript.
-  - Use Docker to create a consistent development environment.
+   - Write code using HTML, CSS, and JavaScript.
+   - Use Docker to create a consistent development environment.
 
 2. CI Pipeline:
 
-  - Push code to a Git repository (e.g., GitHub, GitLab).
-  - The CI pipeline automatically:
-     - Lints your code.
-     - Runs tests (if any).
-     - Builds a Docker image.
+   - Push code to a Git repository (e.g., GitHub, GitLab).
+   - The CI pipeline automatically:
+      - Lints your code.
+      - Runs tests (if any).
+      - Builds a Docker image.
 
 3. CD Pipeline:
 
-  - The CD pipeline automatically deploys the Docker image to a server or hosting platform (e.g., AWS, Netlify, Vercel).
+   - The CD pipeline automatically deploys the Docker image to a server or hosting platform (e.g., AWS, Netlify, Vercel).
 
 4. Production:
 
-  -Your frontend is live and accessible to users.
+   - Your frontend is live and accessible to users.
 
 
-
+---
 
 ## Why Use a CI/CD Pipeline? 
 
 1. Automation:
 
-A CI/CD pipeline automates repetitive tasks like testing, building, and deploying your application. This saves time and reduces the risk of human error.
+   - CI/CD pipeline automates repetitive tasks like testing, building, and deploying your application. This saves time and reduces the risk of human error.
 
 2. Continuous Integration (CI):
 
-Every time you push code to your repository, the CI pipeline automatically runs tests and checks for errors. This ensures that your code is always in a deployable state.
+   - Every time you push code to your repository, the CI pipeline automatically runs tests and checks for errors. This ensures that your code is always in a deployable state.
 
 3. Continuous Deployment (CD):
 
-The CD pipeline automates the deployment process, so you can quickly and reliably deploy updates to your frontend. This is especially useful if you’re frequently making changes to your HTML, CSS, or JavaScript.
+   - The CD pipeline automates the deployment process, so you can quickly and reliably deploy updates to your frontend. This is especially useful if you’re frequently making changes to your HTML, CSS, or JavaScript.
 
 4. Quality Assurance:
 
-By integrating automated testing into your pipeline, you can catch bugs and issues early in the development process.
+    - By integrating automated testing into your pipeline, you can catch bugs and issues early in the development process.
 
 5. Collaboration:
 
-A CI/CD pipeline makes it easier for teams to collaborate on a project. Everyone’s code is automatically tested and integrated, reducing the risk of conflicts or broken builds.
+   - CI/CD pipeline makes it easier for teams to collaborate on a project. Everyone’s code is automatically tested and integrated, reducing the risk of conflicts or broken builds.
 
 6. Faster Delivery:
 
-With a CI/CD pipeline, you can deliver updates to your frontend faster and more frequently, improving the overall development cycle.
+   - With a CI/CD pipeline, you can deliver updates to your frontend faster and more frequently, improving the overall development cycle.
 
+---
 
 
 ## Why Use Docker?
 
 1. Consistency Across Environments:
 
-Docker ensures that your application runs the same way in development, testing, and production environments. This eliminates the "it works on my machine" problem.
+   - Docker ensures that your application runs the same way in development, testing, and production environments. This eliminates the "it works on my machine" problem.
 
-For example, if you’re using specific versions of Node.js, npm, or other tools, Docker ensures everyone working on the project uses the same versions.
+   - For example, if you’re using specific versions of Node.js, npm, or other tools, Docker ensures everyone working on the project uses the same versions.
 
 2. Isolation:
 
-Docker containers isolate your application and its dependencies from the host system. This prevents conflicts with other software or libraries installed on your machine.
+   - Docker containers isolate your application and its dependencies from the host system. This prevents conflicts with other software or libraries installed on your machine.
 
 3. Portability:
 
-Once your application is containerized, it can be easily deployed to any environment that supports Docker (e.g., local machines, cloud servers, etc.).
+   - Once your application is containerized, it can be easily deployed to any environment that supports Docker (e.g., local machines, cloud servers, etc.).
 
 4. Simplified Onboarding:
 
-New team members can quickly set up the project by running a single Docker command, without needing to manually install dependencies or configure their environment.
+   - New team members can quickly set up the project by running a single Docker command, without needing to manually install dependencies or configure their environment.
 
 5. Scalability:
 
-If your project grows and you need to scale your application, Docker makes it easier to deploy multiple instances of your frontend.
+   - If your project grows and you need to scale your application, Docker makes it easier to deploy multiple instances of your frontend.
 
+---
 
 
 ## Why Use Both Together?
@@ -97,7 +99,7 @@ If your project grows and you need to scale your application, Docker makes it ea
   - NGINX can serve static content (like HTML, CSS, JavaScript, and images) to users who visit your website.
   - It is known for being lightweight, fast, and efficient at handling high traffic.
 
-
+---
 
 ## Steps 
 
@@ -105,26 +107,26 @@ If your project grows and you need to scale your application, Docker makes it ea
 ## 1. add .github/workflows directory
 
 The .github/workflows directory is a special folder in your GitHub repository where you store workflow files for GitHub Actions.
-
 Workflow files are written in YAML format (e.g., ci-cd-pipeline.yml) and define the steps for your CI/CD pipeline.
 
-   - Create the .github Folder
-     ```
-     mkdir .github
-     ```
 
-   - Create the workflows Folder inside .github folder
-     ```
-     cd .github
-     mkdir workflows
-     ```
+- Create the .github Folder
+```
+mkdir .github
+```
 
-   - Create the Workflow File called ci-cd-pipeline.yml inside 
-     ./workflows
-     ```
-     cd workflows
-     touch ci-cd-pipeline.yml
-      ```
+- Create the workflows Folder inside .github folder
+```
+cd .github
+mkdir workflows
+```
+
+- Create the Workflow File called ci-cd-pipeline.yml inside 
+./workflows
+```
+cd workflows
+touch ci-cd-pipeline.yml
+```
    
    - Add source code to yml file
       
