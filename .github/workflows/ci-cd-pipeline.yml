@@ -99,9 +99,7 @@
 
 
 
-
 name: CI/CD Pipeline with Docker
-name: html-frontend
 
 on:
   push:
@@ -137,7 +135,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: prabodha1234/html-frontend:latest
+          tags: prabodha1234/myhtml-frontend:latest
 
       # Step 5: Print success message
       - name: Print success message
