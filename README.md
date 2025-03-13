@@ -16,6 +16,7 @@ ci-cd-pipeline/
 │   └── frondend project source code
 ├── tests/
 │   └── (my test code)
+└── Dockerfile
 └── README.md
 └── API-Documentation.md  
 ```
